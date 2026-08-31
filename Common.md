@@ -23,6 +23,9 @@ help
 Get-ChildItem
 gci
 
+
+Get-Alias -Definition Get-ChildItem
+
 Get and Set Date time of system
 Get-Date
 Set-Date
@@ -47,4 +50,9 @@ Write-Output
 Write-Host
 Write-Debug
 Write-EventLog
+
+Invoke-WebRequest
+Get-Alias -Definition Invoke-WebRequest
+
+Invoke-Expression takes a string of text and execute it as a command or script allowing dynamic code execution at runtime
 
