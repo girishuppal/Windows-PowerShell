@@ -37,6 +37,9 @@ Get List of running processes
 `Get-Process | Select-Object Name,Id -First 5`
 `Get-Process | Select-Object Name,Id -Last 10`
 
+`Get-Process | Select-Object Name,Id -First 5 | Export-Csv -Path "c:\girish.csv" -NoTypeInformation`
+
+type c:\girish.csv
 Stop Windows Services
 Stop-Service
 
@@ -60,7 +63,7 @@ Objects and Pipeline
 Get-Process | Get-Member
 Get-Service | Where-Object { $_.StartType -eq 'Automatic' }
 
-Get-ChildItem c:\Girish | Sort-Object Length -Descending
+Get-ChildItem c:\Girish | Sort-Object Length -Descending | Select-Object -First 7
 
 
 
@@ -68,4 +71,16 @@ Invoke-WebRequest
 Get-Alias -Definition Invoke-WebRequest
 
 Invoke-Expression takes a string of text and execute it as a command or script allowing dynamic code execution at runtime
+
+
+Variables
+
+$name="Girish"
+$HOME
+$PID
+$PSVersionTable
+$null
+$_
+
+
 
