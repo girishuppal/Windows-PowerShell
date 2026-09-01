@@ -31,7 +31,11 @@ Get-Date
 Set-Date
 
 Get List of running processes
-Get-Process
+
+`Get-Process`
+`Get-Process | Select-Object Name,Id`
+`Get-Process | Select-Object Name,Id -First 5`
+`Get-Process | Select-Object Name,Id -Last 10`
 
 Stop Windows Services
 Stop-Service
@@ -50,6 +54,15 @@ Write-Output
 Write-Host
 Write-Debug
 Write-EventLog
+
+Objects and Pipeline
+
+Get-Process | Get-Member
+Get-Service | Where-Object { $_.StartType -eq 'Automatic' }
+
+Get-ChildItem c:\Girish | Sort-Object Length -Descending
+
+
 
 Invoke-WebRequest
 Get-Alias -Definition Invoke-WebRequest
